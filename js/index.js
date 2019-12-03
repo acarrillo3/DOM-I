@@ -38,11 +38,17 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img");//created a variable and assigned to find on our html the logo-img ID
+logo.setAttribute('src', siteContent["nav"]["img-src"])//this calls in the logo img 
 
-//working on the navigation 
-let navTop = document.querySelectorAll("a");
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])//this calls in the header img
+
+let mainImg = document.getElementById("middle-img");//created a variable to find the id middle-img in our html doc
+mainImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);//then used the new variable to change the src on the html file by using setAttribute
+
+//navigation 
+const navTop = document.querySelectorAll("a");
 navTop[0].textContent = siteContent["nav"]["nav-item-1"];
 navTop[1].textContent = siteContent["nav"]["nav-item-2"];
 navTop[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -51,16 +57,17 @@ navTop[4].textContent = siteContent["nav"]["nav-item-5"];
 navTop[5].siteContent = siteContent["nav"]["nav-item-6"];
 
 navTop.forEach(function(currentValue) { currentValue.style.color = "green";});
-let navi = document.querySelector("nav");
+const navi = document.querySelector("nav");
 
 const newA = document.createElement("a");//created new element empty
-newA.textContent = "Start";
+newA.setAttribute('href', '#');// added the href and # using setAttribute
+newA.textContent = "Start";// added text to the to the new element
 navi.prepend(newA); //.prepend put the new element add the beginning
 newA.style.color = "green";
 newA.style.cursor = "pointer";
 
-const lastA = document.querySelector("a:last-child");//this edits the text inside the last child
-lastA.textContent = "Contact";
+const lastA = document.querySelector("a:last-child");//created a new variable and assigned to find the last a child in the html doc
+lastA.textContent = "Contact";//this edits the text inside the last child
 
 const newA2 = document.createElement("a")
 newA2.textContent = "End";
@@ -68,7 +75,10 @@ navi.appendChild(newA2); //here i added a new a tag at the end of the nav
 newA2.style.color = "green";
 newA2.style.cursor = "pointer";
 
-
+// Top section .cta, div, .cta-text, h1, button, img #cta-img
+//const topContent = document.querySelectorAll(".cta-text");
+//topContent[0].textContent = siteContent["cta-text]["h1"];
+//topContent[1].textContent = siteContent["cta-text"]["button"]
 
 
 
