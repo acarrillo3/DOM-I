@@ -76,9 +76,38 @@ newA2.style.color = "green";
 newA2.style.cursor = "pointer";
 
 // Top section .cta, div, .cta-text, h1, button, img #cta-img
-//const topContent = document.querySelectorAll(".cta-text");
-//topContent[0].textContent = siteContent["cta-text]["h1"];
-//topContent[1].textContent = siteContent["cta-text"]["button"]
+document.querySelector('.cta h1').textContent = siteContent.cta.h1;// first it looks into the html file for the class .cta h1 and then it inserts the textcontent from the sitecontent
+document.querySelector('.cta button').textContent = siteContent.cta.button;
+
+// Main section 
+const newArrH4 = document.querySelectorAll('.main-content h4'); // this calls the content to from the main-content siteContent into the html doc
+newArrH4[0].textContent = siteContent['main-content']['features-h4'];
+newArrH4[1].textContent = siteContent['main-content']['about-h4'];
+newArrH4[2].textContent = siteContent['main-content']['services-h4'];
+newArrH4[3].textContent = siteContent['main-content']['product-h4'];
+newArrH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+const newArrP = document.querySelectorAll('.main-content p');
+newArrP[0].textContent = siteContent['main-content']['features-content'];
+newArrP[1].textContent = siteContent['main-content']['about-content'];
+newArrP[2].textContent = siteContent['main-content']['services-content'];
+newArrP[3].textContent = siteContent['main-content']['product-content'];
+newArrP[4].textContent = siteContent['main-content']['vision-content'];
+
+//contact section 
+const newArrCont = document.querySelectorAll('.contact h4');
+newArrCont.textContent = siteContent['contact']['contact-h4'];
+
+const newArrContP = document.querySelectorAll('.contact p');
+newArrContP[0].textContent = siteContent['contact']['address'];
+newArrContP[1].textContent = siteContent['contact']['phone'];
+newArrContP[2].textContent = siteContent['contact']['email'];
+
+//footer 
+document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
+
+
 
 
 
