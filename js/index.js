@@ -50,4 +50,27 @@ navTop[3].textContent = siteContent["nav"]["nav-item-4"];
 navTop[4].textContent = siteContent["nav"]["nav-item-5"];
 navTop[5].siteContent = siteContent["nav"]["nav-item-6"];
 
-//navTop.forEach(function(currentValue) { currentValue.style.background = "green";});
+navTop.forEach(function(currentValue) { currentValue.style.color = "green";});
+let navi = document.querySelector("nav");
+
+const newA = document.createElement("a");//created new element empty
+newA.textContent = "Start";
+navi.prepend(newA); //.prepend put the new element add the beginning
+newA.style.color = "green";
+newA.style.cursor = "pointer";
+
+const lastA = document.querySelector("a:last-child");//this edits the text inside the last child
+lastA.textContent = "Contact";
+
+const newA2 = document.createElement("a")
+newA2.textContent = "End";
+navi.appendChild(newA2); //here i added a new a tag at the end of the nav
+newA2.style.color = "green";
+newA2.style.cursor = "pointer";
+
+
+
+
+
+
+
